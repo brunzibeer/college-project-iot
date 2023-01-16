@@ -1,0 +1,55 @@
+<form>
+    <p>
+        <mat-label>Sensor Selected: {{ product.sens_id }}</mat-label> <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input 
+            matInput 
+            name="name"
+            [(ngModel)]="newProduct.name">
+            <mat-icon matSuffix>view_in_ar</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Brand</mat-label>
+            <input 
+            matInput 
+            name="brand"
+            [(ngModel)]="newProduct.brand">
+            <mat-icon matSuffix>label</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>ASIN Code</mat-label>
+            <input 
+            matInput 
+            name="asin"
+            [(ngModel)]="newProduct.asin">
+            <mat-icon matSuffix>qr_code</mat-icon>
+            <mat-hint>Amazon Search Code</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Stock Left</mat-label>
+            <input 
+            matInput 
+            name="stock"
+            [(ngModel)]="newProduct.stock">
+            <mat-icon matSuffix>inventory_2</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Threshold Weight</mat-label>
+            <input 
+            matInput 
+            name="weight"
+            [(ngModel)]="newProduct.weight">
+            <mat-icon matSuffix>fitness_center</mat-icon>
+            <mat-hint>Threshold Weight</mat-hint>
+        </mat-form-field>
+    </p>
+    
+    <p>
+        <button mat-raised-button color="accent" (click)="onSubmit()">Submit</button>
+        <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+    </p>
+    <p *ngIf="submitted">
+        Done! Reload to see changes
+    </p>
+</form>

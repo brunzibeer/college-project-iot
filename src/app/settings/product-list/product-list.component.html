@@ -1,0 +1,7 @@
+<mat-list role="list">
+    <app-product-item
+        *ngFor="let productEl of products"
+        [product]="productEl"
+        (productSelected)="onProductSelected(productEl)">
+    </app-product-item>
+</mat-list>

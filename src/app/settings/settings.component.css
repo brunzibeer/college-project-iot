@@ -1,0 +1,5 @@
+mat-list {
+    flex-grow: 1;
+    border: 3px solid green;
+    overflow: auto;
+}

@@ -1,0 +1,19 @@
+<button mat-button color="primary" (click)="onFetchProducts()">Sync
+    <mat-icon>sync</mat-icon>
+</button>
+<mat-card
+    *ngFor="let prod of products">
+    <mat-card-header>
+        <h2>
+            {{ prod.sens_id }} - {{ prod.name }} - {{ prod.brand }}
+        </h2>
+    </mat-card-header>
+    <mat-card-content>
+            <h3>
+                Current Value: {{ prod.value }} / {{ prod.weight }}
+            </h3>
+            <h4>
+                Left In Stock: {{ prod.stock }}
+            </h4>
+    </mat-card-content>
+</mat-card>
